@@ -9,7 +9,8 @@ UserCheckStart="https://prod-03.uksouth.logic.azure.com/workflows/fbed9434db034c
 UserCheckEnd = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WOajqr-nTCusNB5iSre90uOd5MXFJA3kYg-7fRNRvoM";
 CheckUserExitsURL = "https://prod-15.centralus.logic.azure.com:443/workflows/b3a4e28aa0d34b7e8a5c63279fefded7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=idqwk0_RtWX2UlcBJhGU-zK434GYL9KbG09fiHjpAFQ";
 CheckUsernameIsFree = "https://prod-17.centralus.logic.azure.com:443/workflows/68cfac6afa0d4ecaa168fde59ffb4628/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ABbY8hDqsf2cS5Kq2jXliAX5ubiENoRlq77VCPD9kL0";
-ChangePasswordURL = "https://prod-17.centralus.logic.azure.com/workflows/6d5892483b5c43249fe6f15427d0eeb4/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YLqf8QLCya8Q7skf8n14noi008XF4hrMQVGuKwxF-2A";
+ChangePasswordURL_start = "https://prod-17.centralus.logic.azure.com/workflows/6d5892483b5c43249fe6f15427d0eeb4/triggers/manual/paths/invoke/rest/v1/assets/";
+ChangePasswordUrl_end = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YLqf8QLCya8Q7skf8n14noi008XF4hrMQVGuKwxF-2A";
 
 
 BLOB_ACCOUNT = "https://blobstorageb00808976.blob.core.windows.net";
@@ -223,12 +224,10 @@ function createNewPassword(){
   if(newPassword == confirmNewPassword){
 
     changePasswordInfo = new FormData();
-
-    changePasswordInfo.append('userId', userId);
     changePasswordInfo.append('userPassword', newPassword);
 
     $.ajax({
-      url: ChangePasswordURL,
+      url: ChangePasswordURL_start + userId + ChangePasswordURL_end,
       type:"PUT",
       data: changePasswordInfo,
       cache: false,
