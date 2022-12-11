@@ -5,8 +5,6 @@ DAI_start = "https://prod-08.ukwest.logic.azure.com/workflows/441d9fc5acb6485e87
 DAI_End = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Cymkyfr4eeVEMcHHCBT4SOP_y1PzuTzuV7FSzAaCwWw";
 
 CreateUserURL = "https://prod-28.ukwest.logic.azure.com/workflows/b12c3e6b6ccc494b8aa330dd631e3cd1/triggers/manual/paths/invoke/rest/v1/assets?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iKsGtb-X80_1RHc7HaUOGJY8iqv3hWoOB9zIcOcB5O8";
-UserCheckStart="https://prod-03.uksouth.logic.azure.com/workflows/fbed9434db034c459d4812d31d677199/triggers/manual/paths/invoke/rest/v1/assests/?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WOajqr-nTCusNB5iSre90uOd5MXFJA3kYg-7fRNRvoM";
-UserCheckEnd = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WOajqr-nTCusNB5iSre90uOd5MXFJA3kYg-7fRNRvoM";
 CheckUserExitsURL = "https://prod-15.centralus.logic.azure.com:443/workflows/b3a4e28aa0d34b7e8a5c63279fefded7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=idqwk0_RtWX2UlcBJhGU-zK434GYL9KbG09fiHjpAFQ";
 ChangePasswordURL_start = "https://prod-17.centralus.logic.azure.com/workflows/6d5892483b5c43249fe6f15427d0eeb4/triggers/manual/paths/invoke/rest/v1/assets/";
 ChangePasswordUrl_end = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YLqf8QLCya8Q7skf8n14noi008XF4hrMQVGuKwxF-2A";
@@ -52,8 +50,8 @@ function submitNewAsset(){
   submitData = new FormData();
   //Get form variables and append them to the form data object
   submitData.append('FileName', $('#FileName').val());
-  submitData.append('userID', $('#userID').val());
-  submitData.append('userName', $('#userName').val());
+  submitData.append(sessionStorage.getItem('userId'));
+  submitData.append(sessionStorage.getItem('userName'));
   submitData.append('File', $("#UpFile")[0].files[0]);
   submitData.append('Title', $('#title').val());
   submitData.append('Genre', $('#genre').val());
