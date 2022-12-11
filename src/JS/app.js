@@ -9,7 +9,6 @@ CheckUserExitsURL = "https://prod-15.centralus.logic.azure.com:443/workflows/b3a
 ChangePasswordURL_start = "https://prod-17.centralus.logic.azure.com/workflows/6d5892483b5c43249fe6f15427d0eeb4/triggers/manual/paths/invoke/rest/v1/assets/";
 ChangePasswordUrl_end = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YLqf8QLCya8Q7skf8n14noi008XF4hrMQVGuKwxF-2A";
 
-
 BLOB_ACCOUNT = "https://blobstorageb00808976.blob.core.windows.net";
 
 
