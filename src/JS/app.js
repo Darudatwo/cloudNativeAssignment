@@ -46,12 +46,13 @@ $("#subNewForm").click(function(){
 
 //A function to submit a new asset to the REST endpoint 
 function submitNewAsset(){
+  console.log("test")
 //Create a form data object
   submitData = new FormData();
   //Get form variables and append them to the form data object
   submitData.append('FileName', $('#FileName').val());
-  submitData.append(sessionStorage.getItem('userId'));
-  submitData.append(sessionStorage.getItem('userName'));
+  submitData.append('userID', sessionStorage.getItem('userId'));
+  submitData.append('userName', sessionStorage.getItem('userName'));
   submitData.append('File', $("#UpFile")[0].files[0]);
   submitData.append('Title', $('#title').val());
   submitData.append('Genre', $('#genre').val());
@@ -59,6 +60,7 @@ function submitNewAsset(){
   submitData.append('Producer', $('#producer').val());
   submitData.append('AgeRating', $('#ageRating').val());
   
+  console.log($('#FileName').val())
 
   //Post the form data to the endpoint, note the need to set the content type header
   $.ajax({
