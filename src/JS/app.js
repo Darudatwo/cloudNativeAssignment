@@ -7,7 +7,7 @@ DAI_End = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Cymk
 CreateUserURL = "https://prod-28.ukwest.logic.azure.com/workflows/b12c3e6b6ccc494b8aa330dd631e3cd1/triggers/manual/paths/invoke/rest/v1/assets?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iKsGtb-X80_1RHc7HaUOGJY8iqv3hWoOB9zIcOcB5O8";
 CheckUserExitsURL = "https://prod-15.centralus.logic.azure.com:443/workflows/b3a4e28aa0d34b7e8a5c63279fefded7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=idqwk0_RtWX2UlcBJhGU-zK434GYL9KbG09fiHjpAFQ";
 ChangePasswordURL_start = "https://prod-17.centralus.logic.azure.com/workflows/6d5892483b5c43249fe6f15427d0eeb4/triggers/manual/paths/invoke/rest/v1/assets/";
-ChangePasswordUrl_end = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YLqf8QLCya8Q7skf8n14noi008XF4hrMQVGuKwxF-2A";
+ChangePasswordURL_end = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YLqf8QLCya8Q7skf8n14noi008XF4hrMQVGuKwxF-2A";
 
 BLOB_ACCOUNT = "https://blobstorageb00808976.blob.core.windows.net";
 
