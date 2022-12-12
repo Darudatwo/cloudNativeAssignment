@@ -12,11 +12,6 @@ ChangePasswordURL_end = "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&s
 BLOB_ACCOUNT = "https://blobstorageb00808976.blob.core.windows.net";
 
 
-var userid = "";
-var isAdmin = false;
-var userName = "";
-var userFullName = "";
-
 //Handlers for button clicks
 $(document).ready(function() {
 
