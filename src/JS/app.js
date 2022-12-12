@@ -81,8 +81,6 @@ function getVideoFiles(){
   $.getJSON(RAI, function( data ) {
     //Create an array to hold all the retrieved assets
     var items = [];
-
-    console.log("userid: " + userid);
     //Iterate through the returned records and build HTML, incorporating the key values of the record in the data
     $.each( data, function( key, val ) {
     items.push( "<hr />");
