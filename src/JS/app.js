@@ -141,8 +141,6 @@ function validateLogin(){
       sessionStorage.setItem("userFullName", userData[0].userFullName)
 
       isAdmin = userData[0].isAdmin;
-
-      console.log(userid);
       
       if(userData[0].userName){
         alert ("Login successful");
